@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\mainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,12 @@ Route::get('/', function () {
 });
 
 Route::controller(DemoController::class)->group(function(){
-    //Passing Datv using Controller
+    //Passing Data using Controller in contorller group method
     Route::get('list/{name}','productList');
     Route::get('add/{name}','productAdd');
     Route::get('up/{name}','productUpdate');
 });
+Route::resource("mainresource",mainController::class);
 
 //Register Controller Productlist Frunction
 

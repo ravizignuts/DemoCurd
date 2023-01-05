@@ -13,7 +13,8 @@ class mainController extends Controller
      */
     public function index()
     {
-        //
+        //By Default Controller Call Index Method
+        echo "Index";
     }
 
     /**
@@ -23,7 +24,7 @@ class mainController extends Controller
      */
     public function create()
     {
-        //
+        echo "Create";
     }
 
     /**
@@ -34,7 +35,7 @@ class mainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "store";
     }
 
     /**
@@ -45,7 +46,7 @@ class mainController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "show";
     }
 
     /**
@@ -56,7 +57,7 @@ class mainController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo "edit";
     }
 
     /**
@@ -68,7 +69,7 @@ class mainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo"update";
     }
 
     /**
@@ -79,6 +80,6 @@ class mainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo"destroy";
     }
 }
