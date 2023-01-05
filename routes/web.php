@@ -19,10 +19,10 @@ Route::get('/', function () {
 });
 
 Route::controller(DemoController::class)->group(function(){
-
-    Route::get('list','productList');
-    Route::get('add','productAdd');
-    Route::get('up','productUpdate');
+    //Passing Datv using Controller
+    Route::get('list/{name}','productList');
+    Route::get('add/{name}','productAdd');
+    Route::get('up/{name}','productUpdate');
 });
 
 //Register Controller Productlist Frunction
@@ -31,15 +31,15 @@ Route::get('/hello', function () {
     return view('hello');
 });
 Route::get("enter/{name}/{id}",function ($uname,$uid) {
-    return "$uid $uname Enter The Chat Room"; 
-    
+    return "$uid $uname Enter The Chat Room";
+
 })->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//Validate Enterd Parameter By regular Expression
 
 Route::get('next/{name)/{id}',function($uname,$uid){
     return"$uid $uname Enter The Chat Room";
 })->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//validate with Larval helper function using whereAlpha and whereNumber frunction
 //->name('contactus');//it is you to give name to our roo it is name as nameing method
-Route::view("contact","/contact"); 
+Route::view("contact","/contact");
 
-//second method to pass view 
-Route::view("about","/about"); 
+//second method to pass view
+Route::view("about","/about");

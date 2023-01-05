@@ -6,16 +6,19 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    function productList()
+    function productList($name)
     {
-        echo "Product List";
+        echo $name;
+        echo "</br>Product List";
     }
-    function productAdd()
+    function productAdd($name)
     {
-        echo "Product add";
+        echo $name;
+        echo "</br>Product add";
     }
-    function productUpdate()
+    function productUpdate($name)
     {
-        echo "Product Update";
+        echo $name;
+        echo "</br>Product Update";
     }
 }
