@@ -25,6 +25,10 @@ Route::get("enter/{name}/{id}",function ($uname,$uid) {
     
 })->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//Validate Enterd Parameter By regular Expression
 
-Route::view("contact","/contact");
-Route::view("about","/about");
+Route::get('next/{name)/{id}',function($uname,$uid){
+    return"$uid $uname Enter The Chat Room";
+})->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//validate with Larval helper function using whereAlpha and whereNumber frunction
+
+Route::view("contact","/contact")->name(contactus);//it is you to give name to our root
+Route::view("about","/about");//second method to pass view 
 
