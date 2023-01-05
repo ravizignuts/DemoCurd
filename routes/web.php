@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::controller(DemoController::class)->group(function(){
+
+    Route::get('list','productList');
+    Route::get('add','productAdd');
+    Route::get('up','productUpdate');
+});
+
+//Register Controller Productlist Frunction
+
 Route::get('/hello', function () {
     return view('hello');
 });
@@ -28,7 +38,8 @@ Route::get("enter/{name}/{id}",function ($uname,$uid) {
 Route::get('next/{name)/{id}',function($uname,$uid){
     return"$uid $uname Enter The Chat Room";
 })->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//validate with Larval helper function using whereAlpha and whereNumber frunction
+//->name('contactus');//it is you to give name to our roo it is name as nameing method
+Route::view("contact","/contact"); 
 
-Route::view("contact","/contact")->name(contactus);//it is you to give name to our root
-Route::view("about","/about");//second method to pass view 
-
+//second method to pass view 
+Route::view("about","/about"); 
