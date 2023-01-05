@@ -14,12 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-   
     return view('welcome');
 });
+
 Route::get('/hello', function () {
     return view('hello');
 });
+Route::get("enter/{name}/{id}",function ($uname,$uid) {
+    return "$uid $uname Enter The Chat Room"; 
+    
+})->where(['name'=>'[A-Z,a-z]+','id'=>'[0-9]+']);//Validate Enterd Parameter By regular Expression
+
 Route::view("contact","/contact");
 Route::view("about","/about");
 
