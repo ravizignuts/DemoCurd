@@ -46,6 +46,4 @@ Route::view("contact","/contact");
 //second method to pass view
 //view()->exists('about'); Check that view is exits or not
 Route::view("about","/about");
-//Route::get('/about/{email}/{pass}',function($email,$pass){
-  //  return veiw('about',["email"=>$email,"pass"=>$pass]);
-//});
+
