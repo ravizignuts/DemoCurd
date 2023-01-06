@@ -11,6 +11,7 @@
   </head>
   <body>
     <h1 align="center" style="color: blueviolet">Contact Page </h1><hr><br>
+    {{ URL::current() }}<p>Current Page URL</p>
     <center>
     <a href="/">Welcome Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/home">Home Page</a>&nbsp;&nbsp;&nbsp;&nbsp;

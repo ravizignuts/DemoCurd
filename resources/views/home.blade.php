@@ -11,9 +11,11 @@
   </head>
   <body>
     <h1 align="center" style="color: blueviolet">Home Page</h1><hr><br>
+    {{ URL::full() }}<p>Current Page FUll URL</p>
     <center>
     <a href="/">Welcome Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
      <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;<!--Routes through URL-->
      <a href="/contact">Contact Page</a><hr><br>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </center>

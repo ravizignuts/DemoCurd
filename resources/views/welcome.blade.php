@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,6 +12,7 @@
   </head>
   <body>
   <h1 align="center" style="color: blueviolet">Welcome</h1><hr><br>
+  {{ URL::current() }}<p>Current Page URL</p><!-- if you want to check in wich page you are so type this function and you can get you URL-->
   <center>
  <a href="/home">Home Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
  <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
