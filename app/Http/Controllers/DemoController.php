@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    function productList($name)
+    function productList(Request $req)
     {
-        echo $name;
-        echo "</br>Product List";
+
+        return view("home");
     }
     function productAdd($name)
     {

@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::controller(DemoController::class)->group(function(){
     //Passing Data using Controller in contorller group method
-    Route::get('list/{name}','productList');
+    Route::get('/list','productList');
     Route::get('add/{name}','productAdd');
     Route::get('up/{name}','productUpdate');
 });
