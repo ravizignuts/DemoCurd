@@ -4,8 +4,8 @@
  <a href="/contact">Contact Page</a><br>
  <?php
 if (isset($_REQUEST['submit'])) {
-    $email = $_GET["uemail"];
-    $pass = $_GET["upass"];
+    $email = $_REQUEST["uemail"];
+    $pass = $_REQUEST["upass"];
     echo "Welcome".$email.'</br>';
     echo "Your Password is ".$pass;
 }
