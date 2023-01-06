@@ -29,8 +29,8 @@ Route::resource("mainresource",mainController::class);
 
 //Register Controller Productlist Frunction
 
-Route::get('/hello', function () {
-    return view('hello');
+Route::get('/home', function () {
+    return view('home');
 });
 Route::get("enter/{name}/{id}",function ($uname,$uid) {
     return "$uid $uname Enter The Chat Room";
@@ -45,3 +45,6 @@ Route::view("contact","/contact");
 
 //second method to pass view
 Route::view("about","/about");
+//Route::get('/about/{email}/{pass}',function($email,$pass){
+  //  return veiw('about',["email"=>$email,"pass"=>$pass]);
+//});
