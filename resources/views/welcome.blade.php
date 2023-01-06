@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-  <h1>Welcome</h1>
- <a href="/home">Home Page</a><br>
- <a href="/about">About Page</a><br>
- <a href="/contact">Contact Page</a><br>
-
+  <h1 align="center" style="color: blueviolet">Welcome</h1><hr><br>
+  <center>
+ <a href="/home">Home Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="/contact">Contact Page</a>
+</center>
+<hr><br>
  <form method="GET" action="/home">
   <div class="form-group">
+
     <label for="uemail">Email address</label>
     <input type="email" class="form-control" id="uemail"  name="uemail" aria-describedby="emailHelp" placeholder="Enter email" required>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
