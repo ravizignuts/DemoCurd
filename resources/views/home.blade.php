@@ -5,9 +5,9 @@
     {{ URL::full() }}<p>Current Page FUll URL</p>
     <center>
     <a href="/">Welcome Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;<!--Routes through URL-->
-     <a href="/contact">Contact Page</a><hr><br>
+    <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;<!--Routes through URL-->
+    <a href="/contact">Contact Page</a><hr><br>
     </center>
     <?php
     if (isset($_REQUEST['submit'])) {

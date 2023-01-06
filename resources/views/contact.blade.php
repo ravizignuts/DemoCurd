@@ -6,6 +6,6 @@
     <center>
     <a href="/">Welcome Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/home">Home Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="/about">About Page</a></center>
-     <hr><br>
+    <a href="/about">About Page</a></center>
+    <hr><br>
 @endsection
