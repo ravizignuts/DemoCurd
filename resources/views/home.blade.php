@@ -11,13 +11,19 @@
     </center>
     <table border="2">
         <tr>
+            <th>ID</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         @foreach ($customers as $cust )
         <tr>
+            <td>{{ $cust->id }}</td>
             <td>{{$cust->email}}</td>
             <td>{{$cust->password}}</td>
+            <td> </td>
+            <td></td>
         </tr>
         @endforeach
     </table>

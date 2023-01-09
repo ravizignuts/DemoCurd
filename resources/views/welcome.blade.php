@@ -20,7 +20,7 @@
     <label for="upass">Password</label>
     <input type="password" class="form-control" id="upass" name="upass" placeholder="Password" required>
 </div>
-<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+<button type="submit" class="btn btn-primary" name="submit">LOGIN</button>
 </form>
 @endsection
  
