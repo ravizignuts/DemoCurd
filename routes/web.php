@@ -23,7 +23,7 @@ Route::controller(DemoController::class)->group(function(){
     //Passing Data using Controller in contorller group method
     Route::post('list','productList');
     Route::get('add','productAdd');
-    Route::get('up','productUpdate');
+    Route::get('update/{id}','productUpdate');
 });
 Route::resource("mainresource",mainController::class);
 

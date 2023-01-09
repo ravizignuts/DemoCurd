@@ -7,19 +7,22 @@ use Illuminate\Http\Request;
 use App\Models\customer;
 class DemoController extends Controller
 {
-    function productList()
+    function productList(Request $request)
     {
          //echo "list function";
          //Insert Data Using Create method
-        $custom = customer::create([
-            'email' => $_REQUEST['uemail'],
-            'password' => $_REQUEST['upass']
 
-            ]);
+            $custom = customer::create([
+                'email' => $request['uemail'],
+                'password' => $request['upass']
+                ]);
+
+
+
         /* Insert Data using Instance creation
+        $custom = new customer;
         $em = $_REQUEST['uemail'];
         $pass = $_REQUEST['upass'];
-        $custom = new customer;
         $custom->email=$em;
         $custom->password=$pass;
         $custom->save();
@@ -36,9 +39,21 @@ class DemoController extends Controller
 
         echo "</br>Product add";
     }
-    function productUpdate()
+    function productUpdate($id)
     {
+        // dd($id);
 
-        echo "</br>Product Update";
+       $customers = customer::find($_REQUEST['id']);
+        $customers->email=$_REQUEST['uemail'];
+        $customers->upass=$_REQUEST['upass'];
+        $customers->save();
+
+    #return view('about'/*,['customer'=>$customers]*/);
+        /*$student = Student: :find(8) ;
+        $student-›name = 'hema'; $student-›email = hema@gmail.com'
+        $student-›city = 'dhanbad';
+        $student-›marks = 60;
+        $student -›save () ;*/
+
     }
 }

@@ -5,8 +5,8 @@
     {{ URL::full() }}<p>Current Page FUll URL</p>
     <center>
     <a href="/">Welcome Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;<!--Routes through URL-->
+    <!--<a href="/about">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp; <!--Routes through URL-->
     <a href="/contact">Contact Page</a><hr><br>
     </center>
     <table border="2">
@@ -17,13 +17,13 @@
             <th>Update</th>
             <th>Delete</th>
         </tr>
-        @foreach ($customers as $cust )
+        @foreach ($customers as $customer )
         <tr>
-            <td>{{ $cust->id }}</td>
-            <td>{{$cust->email}}</td>
-            <td>{{$cust->password}}</td>
-            <td> </td>
+            <td>{{ $customer->id }}</td>
+            <td>{{$customer->email}}</td>
+            <td>{{$customer->password}}</td>
             <td></td>
+            <td><a href="/update/{{ $customer->id }}">UPDATE</a></td>
         </tr>
         @endforeach
     </table>
@@ -35,5 +35,5 @@
         echo "Your Password is :- ".$pass;
     }
     */?>
-    <br><a href="/list">View By Controller list Fuction</a>
+    <!--<br><a href="/list">View By Controller list Fuction</a>-->
 @endsection
