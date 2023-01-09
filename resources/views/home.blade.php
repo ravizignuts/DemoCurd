@@ -9,12 +9,25 @@
     <a href="{{URL::to('/about')}}">About Page</a>&nbsp;&nbsp;&nbsp;&nbsp;<!--Routes through URL-->
     <a href="/contact">Contact Page</a><hr><br>
     </center>
+    <table border="2">
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        @foreach ($customers as $cust )
+        <tr>
+            <td>{{$cust->email}}</td>
+            <td>{{$cust->password}}</td>
+        </tr>
+        @endforeach
+    </table>
     <?php
-    if (isset($_REQUEST['submit'])) {
+    /*if (isset($_REQUEST['submit'])) {
         $email = $_REQUEST["uemail"];
         $pass = $_REQUEST["upass"];
         echo "Welcome :- ".$email.'</br>';
         echo "Your Password is :- ".$pass;
-    }?>
+    }
+    */?>
     <br><a href="/list">View By Controller list Fuction</a>
 @endsection

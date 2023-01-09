@@ -9,7 +9,7 @@
 <a href="/contact">Contact Page</a>
 </center>
 <hr><br>
-<form method="GET" action="/home">
+<form method="POST" action="/list">
     @csrf
 <div class="form-group">
     <label for="uemail">Email address</label>

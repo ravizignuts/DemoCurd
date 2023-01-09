@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
-use App\Models\Customers;
+use App\Models\customer;
 class DemoController extends Controller
 {
     function productList()
     {
-
-        echo "list function";
+        $customers = customer::all();
+        //echo "list function";
+        return view('home',['customers'=>$customers]);
         //return database data im jason format with model
-        return customers::all();
+        #return customer::all();
         //just return the database data in json format with database class
         # return DB::select("select * from customers");
     }
