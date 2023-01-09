@@ -1,24 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
-
+use App\Models\Customers;
 class DemoController extends Controller
 {
-    function productList(Request $req)
+    function productList()
     {
 
-        return view("home");
+        echo "list function";
+        //return database data im jason format with model
+        return customers::all();
+        //just return the database data in json format with database class
+        # return DB::select("select * from customers");
     }
-    function productAdd($name)
+    function productAdd()
     {
-        echo $name;
+
         echo "</br>Product add";
     }
-    function productUpdate($name)
+    function productUpdate()
     {
-        echo $name;
+
         echo "</br>Product Update";
     }
 }
