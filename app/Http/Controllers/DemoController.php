@@ -21,8 +21,8 @@ class DemoController extends Controller
 
         /* Insert Data using Instance creation
         $custom = new customer;
-        $em = $_REQUEST['uemail'];
-        $pass = $_REQUEST['upass'];
+        $em = $request['uemail'];
+        $pass = $request['upass'];
         $custom->email=$em;
         $custom->password=$pass;
         $custom->save();
@@ -39,13 +39,13 @@ class DemoController extends Controller
 
         echo "</br>Product add";
     }
-    function productUpdate($id)
+    function productUpdate(Request $request,$id)
     {
         // dd($id);
 
        $customers = customer::find($_REQUEST['id']);
-        $customers->email=$_REQUEST['uemail'];
-        $customers->upass=$_REQUEST['upass'];
+        $customers->email=$request['uemail'];
+        $customers->upass=$request['upass'];
         $customers->save();
 
     #return view('about'/*,['customer'=>$customers]*/);
